@@ -110,18 +110,16 @@ export default {
      * @return {Promise} 返回一个用来执行倒计时
      */
     clickGetVer() {
-      return this.getVer({
-        data: {
-          mobile: this.username,
-          type: 'login'
-        }
-      })
+      return new Promise((res, rej) => {
+				alert('测试使用，无实际小效果')
+				res()
+			})
     },
     /**
      * 点击登录
      */
     clickLogin() {
-			if (!this.checkAccountInfo()) return
+			// if (!this.checkAccountInfo()) return
 			this.$router.push('/core')
     },
     /**

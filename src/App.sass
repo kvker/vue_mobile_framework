@@ -1,0 +1,304 @@
+$d8: #d8d8d8
+$navHeight: .4rem
+
+*
+	box-sizing: border-box
+
+audio, body, canvas, div, dl, dt, dd, figure, footer, header, hgroup, html, iframe, img, label, mark, menu, nav, object, section, span, summary, table, tbody, td, tfoot, thead, tr, video
+	margin: 0
+	padding: 0
+	border: 0
+
+body, button, input, pre, select, textarea
+	font-size: .14rem
+	line-height: 1.5
+	font-family: 'Droid Sans','Droid Sans Fallback','Helvetica Neue', Helvetica,'STHeiTi', sans-serif
+
+audio, canvas, figure img, footer, header, hgroup, nav, section, video
+	display: block
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+	padding: 0
+	margin: 0
+
+label
+	display: flex
+
+ol, ul
+	list-style: none
+
+p
+	margin: 0
+
+table
+	border-collapse: separate
+	border-spacing: 0
+
+table caption, table td, table th
+	text-align: left
+	vertical-align: middle
+
+a, a:active, a:visited
+	color: inherit
+	text-decoration: none
+
+img
+	width: auto
+
+body
+	background-color: #ccc
+
+input, button
+	padding: 0
+	outline: none
+	border: 0
+	background: transparent
+	border-radius: 0
+
+input
+	padding: 0 .08rem
+
+
+// 表单组件
+$radioColor: #ff4063
+input.Radio[type=radio]
+	width: .17rem
+	height: .17rem
+	vertical-align: middle
+	display: inline-block
+	overflow: hidden
+	position: relative
+	padding: 0
+	margin: .02rem .04rem 0 0
+	border: 0
+	&:before
+		content: ''
+		position: absolute
+		width: .15rem
+		height: .15rem
+		border: 0.01rem solid $radioColor
+		border-radius: 50%
+		background-color: #fff
+		&:checked
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -0.04rem 0 0 -0.04rem
+			width: .08rem
+			height: .08rem
+			border-radius: 50%
+			background-color: $radioColor
+
+input.Checkbox[type=checkbox]
+	width: .16rem
+	height: .16rem
+	vertical-align: middle
+	display: inline-block
+	overflow: hidden
+	position: relative
+	padding: 0
+	margin: -.02rem .04rem 0 0
+	border: 0
+	&:before
+		content: ''
+		position: absolute
+		width: .14rem
+		height: .14rem
+		border: 0.01rem solid #ccc
+		border-radius: .02rem
+		background-color: #fff
+		&:checked
+		&:before
+			background-color: $radioColor
+			border-color: $radioColor
+		&:after
+			content: ''
+			position: absolute
+			top: .02rem
+			left: .05rem
+			width: .04rem
+			height: .06rem
+			border-top: .02rem solid #fff
+			border-left: .02rem solid #fff
+			border-radius: .02rem
+			transform:rotate(225deg)
+
+
+audio, body, canvas, div, dl, dt, dd, figure, footer, header, hgroup, html, iframe, img, label, mark, menu, nav, object, section, span, summary, table, tbody, td, tfoot, thead, tr, video
+	margin: 0
+	padding: 0
+	border: 0
+
+body, button, input, pre, select, textarea
+	font-size: .14rem
+	line-height: 1.5
+	font-family: 'Droid Sans','Droid Sans Fallback','Helvetica Neue', Helvetica,'STHeiTi', sans-serif
+
+audio, canvas, figure img, footer, header, hgroup, nav, section, video
+	display: block
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+	padding: 0
+	margin: 0
+
+label
+	display: flex
+
+ol, ul
+	list-style: none
+
+p
+	margin: 0
+
+table
+	border-collapse: separate
+	border-spacing: 0
+
+table caption, table td, table th
+	text-align: left
+	vertical-align: middle
+
+a, a:active, a:visited
+	color: inherit
+	text-decoration: none
+
+// *: focus
+// 	outline: 0
+
+img
+	width: auto
+
+body
+	background-color: #ccc
+
+input, button
+	padding: 0
+	outline: none
+	border: 0
+	background: transparent
+	border-radius: 0
+
+input
+	padding: 0 .08rem
+
+
+// 表单组件
+$radioColor: #ff4063
+input.Radio[type=radio]
+	width: .17rem
+	height: .17rem
+	vertical-align: middle
+	display: inline-block
+	overflow: hidden
+	position: relative
+	padding: 0
+	margin: .02rem .04rem 0 0
+	border: 0
+	&:before
+		content: ''
+		position: absolute
+		width: .15rem
+		height: .15rem
+		border: 0.01rem solid $radioColor
+		border-radius: 50%
+		background-color: #fff
+		&:checked
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -0.04rem 0 0 -0.04rem
+			width: .08rem
+			height: .08rem
+			border-radius: 50%
+			background-color: $radioColor
+
+input.Checkbox[type=checkbox]
+	width: .16rem
+	height: .16rem
+	vertical-align: middle
+	display: inline-block
+	overflow: hidden
+	position: relative
+	padding: 0
+	margin: -.02rem .04rem 0 0
+	border: 0
+	&:before
+		content: ''
+		position: absolute
+		width: .14rem
+		height: .14rem
+		border: 0.01rem solid #ccc
+		border-radius: .02rem
+		background-color: #fff
+		&:checked
+		&:before
+			background-color: $radioColor
+			border-color: $radioColor
+		&:after
+			content: ''
+			position: absolute
+			top: .02rem
+			left: .05rem
+			width: .04rem
+			height: .06rem
+			border-top: .02rem solid #fff
+			border-left: .02rem solid #fff
+			border-radius: .02rem
+			transform:rotate(225deg)
+.page
+	position: fixed
+	left: 0
+	top: 0
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: 100%
+	font-size: 0.14rem
+	background: #fff
+	z-index: 1
+	.navigator
+		position: absolute
+		left: 0
+		top: 0
+		& > .content
+		height: 100%
+		overflow-y: scroll
+		.navigator + .content
+		height: e('calc(100% - .4rem)')
+		.navigator + .back
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		z-index: 0
+.push-enter
+	transform: translateX(100%)
+.push-enter-active
+	transition: transform 0.3s ease
+.push-enter-to, .push-leave
+	transform: translateX(0)
+	opacity: 1
+.push-leave-to
+	transform: translateX(-100%)
+	opacity: 0.8
+.push-leave-active
+	transition: transform 0.3s ease
+.pop-enter
+	transform: translateX(-100%)
+.pop-enter-active
+	transition: transform 0.3s ease
+.pop-enter-to, .pop-leave
+	transform: translateX(0)
+	opacity: 1
+.pop-leave-to
+	transform: translateX(100%)
+	opacity: 0.8
+.pop-leave-active
+	transition: transform 0.3s ease

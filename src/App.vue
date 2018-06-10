@@ -12,6 +12,6 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import './App';
+<style lang="sass">
+@import './App'
 </style>

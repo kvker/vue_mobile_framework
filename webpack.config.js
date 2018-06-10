@@ -8,7 +8,7 @@ function resolve(dir) {
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
 	// 入口 js，可以多个
-	entry: ['./src/main.js'],
+	entry: ['./src/main.coffee'],
 	// 打包输出费配置
 	output: {
 		path: __dirname + '/dist',
@@ -28,6 +28,14 @@ module.exports = {
 				use: [
 					{
 						loader: 'babel-loader'
+					},
+				]
+			},
+			{
+				test: /\.coffee$/,
+				use: [
+					{
+						loader: 'coffeescript-loader'
 					},
 				]
 			},
@@ -79,7 +87,7 @@ module.exports = {
 		]
 	},
 	resolve: {
-		extensions: ['.js', '.vue', '.json'],
+		extensions: ['.js', '.vue', '.json', '.coffee'],
 		alias: {
 			src: path.resolve(__dirname, 'src'),
 			static: path.resolve(__dirname, 'src/static'),

@@ -2,14 +2,12 @@
 	router-view
 </template>
 
-<script>
-export default {
-	data() {
-		return {
+<script lang="coffee">
+export default
+	data: ->
+		{
 			routerObj: {},
 		}
-	}
-}
 </script>
 
 <style lang="sass">

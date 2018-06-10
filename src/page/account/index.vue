@@ -2,10 +2,10 @@
 	router-view
 </template>
 
-<script>
+<script lang="coffee">
 export default {}
 </script>
 
-<style>
+<style lang="sass" scoped>
 
 </style>

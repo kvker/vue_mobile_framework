@@ -6,17 +6,14 @@
 	div 页面3
 </template>
 
-<script>
-export default {
-
-}
+<script lang="coffee">
+export default {}
 </script>
 
-<style lang="less" scoped>
-button {
-	width: 1rem;
-	height: .52rem;
-	color: white;
-	background: red;
-}
+<style lang="sass" scoped>
+button
+	width: 1rem
+	height: .52rem
+	color: white
+	background: red
 </style>

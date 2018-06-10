@@ -1,13 +1,11 @@
 <template>
-  
+
 </template>
 
-<script>
-export default {
-
-}
+<script lang="coffee">
+export default {}
 </script>
 
-<style>
+<style lang="sass" scoped>
 
 </style>

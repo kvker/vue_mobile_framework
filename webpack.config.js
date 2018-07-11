@@ -35,7 +35,7 @@ module.exports = {
 				test: /\.coffee$/,
 				use: [
 					{
-						loader: 'coffeescript-loader'
+						loader: 'coffee-loader'
 					},
 				]
 			},

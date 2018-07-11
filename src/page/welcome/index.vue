@@ -6,7 +6,7 @@
 <script lang="coffee">
 export default
 	mounted: ->
-		setTimeout ->
+		setTimeout =>
 			@$router.push('/account')
 		, 300
 </script>

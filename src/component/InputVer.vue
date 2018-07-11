@@ -1,20 +1,20 @@
 <template lang="pug">
-	section.input_ver
-		input(
-			ref="input"
-			v-bind="$attrs"
-			v-model="value"
-			@input="inputValue"
-		)
-		button.ver(
-			:class="{clickAllow}"
-			@click="clickVer"
-		) {{showCount}}
-		img.close(
-			v-show="closeShow"
-			@click="clickClose"
-			src="~img/close_icon.png"
-		)
+  section.input_ver
+    input(
+      ref="input"
+      v-bind="$attrs"
+      v-model="value"
+      @input="inputValue"
+    )
+    button.ver(
+      :class="{clickAllow}"
+      @click="clickVer"
+    ) {{showCount}}
+    img.close(
+      v-show="closeShow"
+      @click="clickClose"
+      src="~img/close_icon.png"
+    )
 </template>
 
 <script>
@@ -23,16 +23,16 @@ export default {
     // 正则清除
     clear: {
       type: String
-		},
-		// 是否可点击
-		clickAllow: {
-			type: Boolean,
-		},
-		// 获取验证码事件
-		getVer: {
-			type: Function,
-			required: true,
-		}
+    },
+    // 是否可点击
+    clickAllow: {
+      type: Boolean,
+    },
+    // 获取验证码事件
+    getVer: {
+      type: Function,
+      required: true,
+    }
   },
   data() {
     return {
@@ -56,10 +56,10 @@ export default {
     inputValue(e) {
       let input = this.$refs.input
       let val = input.value
-			val = val.replace(/\D/g, '')
+      val = val.replace(/\D/g, '')
 
-			if(val.length > 0) this.closeShow = true
-			else this.closeShow = false
+      if(val.length > 0) this.closeShow = true
+      else this.closeShow = false
 
       this.value = val
       this.$emit('input', val)
@@ -68,26 +68,26 @@ export default {
      * 点击获取验证码按钮
      */
     clickVer() {
-			if (this.runCount || !this.clickAllow) return
+      if (this.runCount || !this.clickAllow) return
 
-			this.getVer()
-				.then(() => {
-					this.runCount = true
-					this.count = 120
-					setInterval(() => {
-						this.count -= 1
-						if (this.count <= 0) {
-							this.runCount = false
-						}
-					}, 1000)
-				})
+      this.getVer()
+        .then(() => {
+          this.runCount = true
+          this.count = 120
+          setInterval(() => {
+            this.count -= 1
+            if (this.count <= 0) {
+              this.runCount = false
+            }
+          }, 1000)
+        })
     },
     /**
      * 点击显示出来的关闭按钮
      */
     clickClose() {
       this.value = ''
-			this.closeShow = false
+      this.closeShow = false
       this.$emit('input', this.value)
     }
   }
@@ -107,8 +107,8 @@ export default {
     height: 100%;
     border: none;
     background: transparent;
-		border-bottom: 0.01rem solid #eee;
-		color: @focusColor;
+    border-bottom: 0.01rem solid #eee;
+    color: @focusColor;
     &:focus {
       border-bottom-color: #aaa;
     }
@@ -124,11 +124,11 @@ export default {
     background: transparent;
     border-left: 0.01rem solid #eee;
     color: @blurColor;
-	}
+  }
 
-	.clickAllow {
-		color: @focusColor;
-	}
+  .clickAllow {
+    color: @focusColor;
+  }
 
   .close {
     position: absolute;

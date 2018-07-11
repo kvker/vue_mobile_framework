@@ -1,16 +1,16 @@
 <template lang="pug">
-	section.input_line
-		input(
-			ref="input"
-			v-bind="$attrs"
-			v-model="value"
-			@input="inputValue"
-		)
-		img.close(
-			v-show="closeShow"
-			@click="clickClose"
-			src="~img/close_icon.png"
-		)
+  section.input_line
+    input(
+      ref="input"
+      v-bind="$attrs"
+      v-model="value"
+      @input="inputValue"
+    )
+    img.close(
+      v-show="closeShow"
+      @click="clickClose"
+      src="~img/close_icon.png"
+    )
 </template>
 
 <script>
@@ -40,7 +40,7 @@ export default {
       if (val.length > 0) this.closeShow = true
       else this.closeShow = false
 
-			this.value = val
+      this.value = val
       this.$emit('input', val)
     },
     /**

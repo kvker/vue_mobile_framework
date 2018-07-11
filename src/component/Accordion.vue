@@ -1,9 +1,9 @@
 <template lang="pug">
 #accordion(
-	:class="fromClass"
-	@click="$emit('toggleAccordion')"
+  :class="fromClass"
+  @click="$emit('toggleAccordion')"
 )
-	slot(name="content")
+  slot(name="content")
 </template>
 
 <script>

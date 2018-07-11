@@ -1,18 +1,18 @@
 <template lang="pug">
 button.select(
-	v-on='$listeners'
+  v-on='$listeners'
 )
-	.left
-		span {{title}}
-		span.star(
-			v-if="starShow"
-		) *
-	.right
-		input.input(
-			disabled
-			v-bind="$attrs"
-		)
-		span.arrow >
+  .left
+    span {{title}}
+    span.star(
+      v-if="starShow"
+    ) *
+  .right
+    input.input(
+      disabled
+      v-bind="$attrs"
+    )
+    span.arrow >
 </template>
 
 <script>
@@ -53,10 +53,10 @@ export default {
     }
   }
   .right {
-		flex: 1;
-		.input {
-			width: 2rem;
-		}
+    flex: 1;
+    .input {
+      width: 2rem;
+    }
     .arrow {
       transform: scale(0.8, 1.6);
       color: rgba(0, 0, 0, 0.4);

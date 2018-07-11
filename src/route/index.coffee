@@ -5,22 +5,22 @@ import account from './account/index'
 import core from './core/index'
 
 export default new VueRouter(
-	routes: [
-		{
-			path: '/welcome'
-			component: welcome
-			alias: ''
-		}
-		{
-			path: '/account'
-			component: accountVue
-			children: account
-		}
-		{
-			path: '/core'
-			component: coreVue
-			children: core
-		}
-	]
-	# mode : 'history'
+  routes: [
+    {
+      path: '/welcome'
+      component: welcome
+      alias: ''
+    }
+    {
+      path: '/account'
+      component: accountVue
+      children: account
+    }
+    {
+      path: '/core'
+      component: coreVue
+      children: core
+    }
+  ]
+  # mode : 'history'
 )

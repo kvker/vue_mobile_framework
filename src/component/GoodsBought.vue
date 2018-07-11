@@ -1,16 +1,16 @@
 <template lang="pug">
-	.goods-item
-		img.img(
-			src="#"
-		)
-		.detail
-			span HB-73551
-			span.total ￥500.00 x 2
-		.price
-			del ￥1000.00
-			.discount 9折
-			.real(v-if="false") ￥1000.00
-			.discounted(v-else) ￥900.00
+  .goods-item
+    img.img(
+      src="#"
+    )
+    .detail
+      span HB-73551
+      span.total ￥500.00 x 2
+    .price
+      del ￥1000.00
+      .discount 9折
+      .real(v-if="false") ￥1000.00
+      .discounted(v-else) ￥900.00
 </template>
 
 <script>

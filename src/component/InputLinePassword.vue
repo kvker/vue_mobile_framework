@@ -1,17 +1,17 @@
 <template lang="pug">
-	section.input-line-password
-		input(
-			ref="input"
-			type="password"
-			v-bind="$attrs"
-			v-model="value"
-			@input="inputValue"
-		)
-		img.eye(
-			v-show="closeShow"
-			@click="clickClose"
-			:src="src"
-		)
+  section.input-line-password
+    input(
+      ref="input"
+      type="password"
+      v-bind="$attrs"
+      v-model="value"
+      @input="inputValue"
+    )
+    img.eye(
+      v-show="closeShow"
+      @click="clickClose"
+      :src="src"
+    )
 </template>
 
 <script>
@@ -31,7 +31,7 @@ export default {
      * 图片链接
      */
     src() {
-			let src = eyeOff
+      let src = eyeOff
       if (this.openEye) src = eye
       return src
     }
@@ -63,8 +63,8 @@ export default {
      * 点击显示出来的关闭按钮
      */
     clickClose() {
-			this.openEye = !this.openEye
-			this.$refs.input.type = this.openEye ? 'text' : 'password'
+      this.openEye = !this.openEye
+      this.$refs.input.type = this.openEye ? 'text' : 'password'
     }
   }
 }
@@ -97,14 +97,14 @@ export default {
 }
 
 ::-webkit-input-placeholder {
-	color: @blurColor;
+  color: @blurColor;
 }
 
 ::-ms-input-placeholder {
-	color: @blurColor;
+  color: @blurColor;
 }
 
 ::-moz-placeholder {
-	color: @blurColor;
+  color: @blurColor;
 }
 </style>

@@ -14,11 +14,11 @@ import 'component/global'
 # Vue 全局初始化
 
 window.app = new Vue({
-		el: '#app'
-		store
-		router
-		components: {
-			App
-		}
-		template: '<App />'
+    el: '#app'
+    store
+    router
+    components: {
+      App
+    }
+    template: '<App />'
 })

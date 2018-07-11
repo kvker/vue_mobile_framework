@@ -1,13 +1,13 @@
 <template lang="pug">
-	router-view
+  router-view
 </template>
 
 <script lang="coffee">
 export default
-	data: ->
-		{
-			routerObj: {},
-		}
+  data: ->
+    {
+      routerObj: {},
+    }
 </script>
 
 <style lang="sass">

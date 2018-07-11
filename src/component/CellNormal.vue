@@ -1,12 +1,12 @@
 <template lang="pug">
-	button.cell-normal(
-		v-on="$listeners"
-	)
-		p.title {{title}}
-		section.right
-			p.placeholder(v-if="!result") {{placeholder}}
-			p.result(v-else) {{result}}
-			p.arrow >
+  button.cell-normal(
+    v-on="$listeners"
+  )
+    p.title {{title}}
+    section.right
+      p.placeholder(v-if="!result") {{placeholder}}
+      p.result(v-else) {{result}}
+      p.arrow >
 </template>
 
 <script>
@@ -39,19 +39,19 @@ export default {
   border-bottom: 0.01rem solid rgba(0, 0, 0, 0.09);
   .title {
     color: rgba(0, 0, 0, 0.85);
-		width: 50%;
-		text-align: left;
+    width: 50%;
+    text-align: left;
   }
   .right {
     display: flex;
     align-items: center;
-		width: 50%;
-		.title, .placeholder {
-			width: 100%;
+    width: 50%;
+    .title, .placeholder {
+      width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-		}
+    }
     .title {
       margin-right: 0.4rem;
     }

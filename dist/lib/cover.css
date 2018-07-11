@@ -1,9 +1,9 @@
 /* van初始样式修改 */
 .van-toast{
-	font-size: .14rem;
-	padding: 14px;
+  font-size: .14rem;
+  padding: 14px;
 }
 
 .van-tabs__wrap {
-	z-index: 1;
+  z-index: 1;
 }

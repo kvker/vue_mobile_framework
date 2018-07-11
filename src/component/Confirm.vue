@@ -1,18 +1,18 @@
 <template lang="pug">
-	section.confirm(
-		:class="{show}"
-	)
-		section.content
-			p.title {{obj.title}}
-			slot
-			section.ctrl
-				button.cancel(
-					@click="$emit('clickCancel')"
-				)
-					p {{obj.cancel || '取消'}}
-				button(
-					@click="$emit('clickConfirm')"
-				) {{obj.confirm || '确定'}}
+  section.confirm(
+    :class="{show}"
+  )
+    section.content
+      p.title {{obj.title}}
+      slot
+      section.ctrl
+        button.cancel(
+          @click="$emit('clickCancel')"
+        )
+          p {{obj.cancel || '取消'}}
+        button(
+          @click="$emit('clickConfirm')"
+        ) {{obj.confirm || '确定'}}
 </template>
 
 <script>
@@ -26,11 +26,11 @@ export default {
       type: Object,
       required: true
     }
-	},
-	data() {
-		return {
-		}
-	}
+  },
+  data() {
+    return {
+    }
+  }
 }
 </script>
 
@@ -68,10 +68,10 @@ export default {
         height: 0.48rem;
       }
       .cancel {
-				color: rgba(0, 0, 0, 0.45);
-				p {
-					border-right: 0.01rem solid rgba(0, 0, 0, 0.09);
-				}
+        color: rgba(0, 0, 0, 0.45);
+        p {
+          border-right: 0.01rem solid rgba(0, 0, 0, 0.09);
+        }
       }
     }
   }

@@ -1,23 +1,23 @@
 <template lang="pug">
-	.cell-check-box
-		.top(
-			@click.self="clickTop"
-		)
-			label
-				input(
-					type="checkbox"
-					:checked="item.isChecked"
-					@change="changeChecked"
-				)
-				span.title {{item.ctFuncName}}
-				.show-box
-			p.arrow(
-				:class="{rotate: contentShow}"
-			) >
-		.content(
-			:class="{contentShow}"
-		)
-			slot
+  .cell-check-box
+    .top(
+      @click.self="clickTop"
+    )
+      label
+        input(
+          type="checkbox"
+          :checked="item.isChecked"
+          @change="changeChecked"
+        )
+        span.title {{item.ctFuncName}}
+        .show-box
+      p.arrow(
+        :class="{rotate: contentShow}"
+      ) >
+    .content(
+      :class="{contentShow}"
+    )
+      slot
 </template>
 
 <script>
@@ -45,9 +45,9 @@ export default {
     },
     changeChecked(e) {
       this.$emit('changeChecked', {
-				item: this.item,
-				isChecked: e.target.checked ? 1 : 0
-			})
+        item: this.item,
+        isChecked: e.target.checked ? 1 : 0
+      })
     }
   }
 }

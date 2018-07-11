@@ -1,29 +1,29 @@
 <template lang="pug">
-	section.cell-fold
-		section.top(
-			@click.self="clickTop"
-		)
-			p.title {{title}}
-			cell-swipe(
-				@change="swipeChange"
-				@clickFirst="$emit('clickFirst')"
-				@clickSecond="$emit('clickSecond')"
-			)
-				section.right(
-					:class="{swipeOpen}"
-				)
-					button.icon(
-						@click="$emit('clickIcon')"
-					) +
-					p.arrow(
-						v-show="!noArrow"
-						:class="{rotate: contentShow}"
-					) >
-				section.under
-		section.content(
-			:class="{contentShow}"
-		)
-			slot
+  section.cell-fold
+    section.top(
+      @click.self="clickTop"
+    )
+      p.title {{title}}
+      cell-swipe(
+        @change="swipeChange"
+        @clickFirst="$emit('clickFirst')"
+        @clickSecond="$emit('clickSecond')"
+      )
+        section.right(
+          :class="{swipeOpen}"
+        )
+          button.icon(
+            @click="$emit('clickIcon')"
+          ) +
+          p.arrow(
+            v-show="!noArrow"
+            :class="{rotate: contentShow}"
+          ) >
+        section.under
+    section.content(
+      :class="{contentShow}"
+    )
+      slot
 </template>
 
 <script>
@@ -64,7 +64,7 @@ export default {
 
 <style lang="less" scoped>
 .cell-fold {
-	position: relative;
+  position: relative;
   .top {
     position: relative;
     display: flex;
@@ -74,14 +74,14 @@ export default {
     border-bottom: 0.01rem solid #d8d8d8;
     background: white;
     .right {
-			position: relative;
+      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 1rem;
       height: 100%;
-			transition: transform 0.3s linear;
-			background: white;
+      transition: transform 0.3s linear;
+      background: white;
       .icon {
         border: none;
         color: #999;
@@ -89,10 +89,10 @@ export default {
         font-size: 0.18rem;
       }
       .arrow {
-				margin-right: .08rem;
+        margin-right: .08rem;
         transform: rotateZ(-90deg) scale(0.8, 1.6);
-				color: rgba(0, 0, 0, 0.4);
-				transition: transform .1s linear;
+        color: rgba(0, 0, 0, 0.4);
+        transition: transform .1s linear;
       }
       .rotate {
         transform: rotateZ(90deg) scale(0.8, 1.6);

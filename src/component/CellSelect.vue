@@ -1,12 +1,12 @@
 <template lang="pug">
-	button.cell-select(
-		v-on="$listeners"
-	)
-		section.left
-			//- p.title {{title}}
-			p.placeholder(v-if="!result") {{placeholder}}
-			p.result(v-else) {{result}}
-		p.arrow >
+  button.cell-select(
+    v-on="$listeners"
+  )
+    section.left
+      //- p.title {{title}}
+      p.placeholder(v-if="!result") {{placeholder}}
+      p.result(v-else) {{result}}
+    p.arrow >
 </template>
 
 <script>
@@ -33,16 +33,16 @@ export default {
   align-items: center;
   background: transparent;
   border: none;
-	border-bottom: 0.01rem solid rgba(0, 0, 0, 0.45);
+  border-bottom: 0.01rem solid rgba(0, 0, 0, 0.45);
   .left {
     display: flex;
     align-items: center;
     .title {
       margin-right: 0.4rem;
-		}
-		.placeholder {
-			color: #aaa;
-		}
+    }
+    .placeholder {
+      color: #aaa;
+    }
   }
   .arrow {
     transform: scale(0.8, 1.6);

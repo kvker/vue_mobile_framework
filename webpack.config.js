@@ -1,9 +1,10 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
+
 // 打包 html 模板文件到 html 文件的插件，自动填充生成的 js 文件
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
